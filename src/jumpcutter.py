@@ -65,7 +65,7 @@ def main(args):
     URL = args.url
     FRAME_QUALITY = args.frame_quality
 
-    assert INPUT_FILE != None , "why u put no input file, that dum"
+    assert INPUT_FILE != None , "No input file specified!"
         
     if len(args.output_file) >= 1:
         OUTPUT_FILE = args.output_file
