@@ -8,7 +8,7 @@ For a more polished version of this software that Cary and friends have been wor
 
 ## Installing
 
-PyInstaller builds are available on [the GitHub releases page](https://github.com/19wintersp/JumpCutterGUI/releases/latest) of the repository, and contain archives for each platform. Download the correct one for you, and extract the files inside. The executable should be named `jumpcutter_gui`, possibly with a file extension such as ".exe".
+PyInstaller builds are available on [the GitHub releases page](https://github.com/19wintersp/JumpCutterGUI/releases/latest) of the repository, and contain executables for each platform. Download the one for your platform, and run it.
 
 ## Some heads-up
 
