@@ -210,6 +210,7 @@ class JcApp:
 			os.remove(file)
 
 		options = {
+			"url": None, "input_file": None,
 			"output_file": file,
 			"silent_threshold": check_type(self.silent_thresh.get(), float, "Silent threshold"),
 			"sounded_speed": check_type(self.sounded_speed.get(), float, "Sounded speed"),
@@ -224,7 +225,7 @@ class JcApp:
 			options["input_file"] = self.input_file.get()
 		else:
 			options["url"] = self.youtube_url.get()
-		
+
 		args = lambda: None
 		for key in options:
 			setattr(args, key, options[key])
