@@ -12,6 +12,9 @@ import os
 import argparse
 from pytube import YouTube
 
+TEMP_FOLDER = "TEMP"
+AUDIO_FADE_ENVELOPE_SIZE = 400
+
 def downloadFile(url):
     name = YouTube(url).streams.first().download()
     newname = name.replace(' ','_')
@@ -72,9 +75,6 @@ def main(args):
     else:
         OUTPUT_FILE = inputToOutputFilename(INPUT_FILE)
 
-    TEMP_FOLDER = "TEMP"
-    AUDIO_FADE_ENVELOPE_SIZE = 400 # smooth out transitiion's audio by quickly fading in/out (arbitrary magic number whatever)
-        
     createPath(TEMP_FOLDER)
 
     command = "ffmpeg -i "+INPUT_FILE+" -qscale:v "+str(FRAME_QUALITY)+" "+TEMP_FOLDER+"/frame%06d.jpg -hide_banner"
