@@ -1,11 +1,16 @@
-# jumpcutter
-Automatically edits videos. Explanation here: https://www.youtube.com/watch?v=DQ8orIurGxw
+# JumpCutter GUI
 
-Go here for a more polished version of this software that my friends and I have been working on fr the last year or so: https://jumpcutter.com/
+**Automatically edits videos. [Explanation](https://www.youtube.com/watch?v=DQ8orIurGxw)**
 
-Since my GitHub is more like a dumping ground or personal journal, I'm not going to be actively updating this GitHub repo. But if you do want a version of jumpcutter that is actively being worked on, please do check on the version at https://jumpcutter.com/! There's way more developers fixing bugs and adding new features to that tool, and there's a developer's Discord server to discuss anything JC-related, so go check it out!
+This fork of [the original by CaryKH](https://github.com/carykh/jumpcutter) adds a Tkinter-based GUI for easier usage.
 
-## Some heads-up:
+For a more polished version of this software that Cary and friends have been working on for the last year or so, visit [JumpCutter.com](https://jumpcutter.com/)
+
+## Installing
+
+PyInstaller builds are available on [the GitHub releases page](https://github.com/19wintersp/JumpCutterGUI/releases/latest) of the repository, and contain archives for each platform. Download the correct one for you, and extract the files inside. The executable should be named `jumpcutter_gui`, possibly with a file extension such as ".exe".
+
+## Some heads-up
 
 It uses Python 3.
 
@@ -17,9 +22,6 @@ As the program runs, it saves every frame of the video as an image file in a
 temporary folder. If your video is long, this could take a LOT of space.
 I have processed 17-minute videos completely fine, but be wary if you're gonna go longer.
 
-I want to use pyinstaller to turn this into an executable, so non-techy people
-can use it EVEN IF they don't have Python and all those libraries. Jabrils 
-recommended this to me. However, my pyinstaller build did not work. :( HELP
-
 ## Building with nix
-`nix-build` to get a script with all the libraries and ffmpeg, `nix-build -A bundle` to get a single binary.
+
+`nix-build` to get a script with all the libraries and ffmpeg, `nix-build -A bundle` to get a single binary. (this has not been tested on this fork)
