@@ -11,6 +11,7 @@ class JcApp:
 		self.root.resizable(False, False)
 		self.root.config(pady=0, padx=0)
 
+		self.rendering = tk.StringVar()
 		self.input_type = tk.IntVar()
 		self.input_type.set(0)
 		self.input_file = tk.StringVar()
@@ -135,6 +136,9 @@ class JcApp:
 
 		actions_section = tk.Frame(self.root, padx=8, pady=8)
 
+		status_label = tk.Label(actions_section, textvariable=self.rendering)
+		status_label.pack(expand=False, side=tk.BOTTOM, anchor=tk.E)
+
 		run_butt = tk.Button(actions_section, text="Run", command=self.run_jumpcutter)
 		run_butt.pack(side=tk.RIGHT)
 
@@ -231,10 +235,13 @@ class JcApp:
 			setattr(args, key, options[key])
 
 		try:
+			self.rendering.set("Rendering in progress")
 			jumpcutter.main(args)
 			tk_msgbox.showinfo(title="Done", message=("Rendering complete; output saved to %s." % file))
 		except:
 			tk_msgbox.showerror(title="Failed", message="JumpCutter failed unexpectedly.")
+		
+		self.rendering.set("")
 
 def main():
 	JcApp()
