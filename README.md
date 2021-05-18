@@ -6,6 +6,8 @@ This fork of [the original by CaryKH](https://github.com/carykh/jumpcutter) adds
 
 For a more polished version of this software that Cary and friends have been working on for the last year or so, visit [JumpCutter.com](https://jumpcutter.com/)
 
+![Running on Ubuntu 20.04 with GNOME](https://user-images.githubusercontent.com/61561933/118718115-cc3cd300-b81e-11eb-8600-a0672cffe0a1.png)
+
 ## Installing
 
 PyInstaller builds are available on [the GitHub releases page](https://github.com/19wintersp/JumpCutterGUI/releases/latest) of the repository, and contain executables for each platform. Download the one for your platform, and run it.
